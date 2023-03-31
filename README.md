@@ -6,4 +6,4 @@ Creating with
 - Css
 - Bootstrap
 - Feather Icons
-- Vanilla Js
+- Typescript
