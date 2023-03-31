@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./feather-icons-web/feather.css">
+  <script src="https://kit.fontawesome.com/495cdf9e7a.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Drawing App</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class=" navbar">
+      <!-- tools -->
+      <div class="tools border rounded btn-group bg-body">
+        <button class="btn btn-light tool-btn brush active" title="brush">
+          <i class="feather-edit-2"></i>
+        </button>
+        <button class="btn btn-light tool-btn line" title="line">
+          <i class="feather-minus"></i>
+        </button>
+        <button class="btn btn-light tool-btn circle" title="circle">
+          <i class="feather-circle"></i>
+        </button>
+        <button class="btn btn-light tool-btn traingle" title="triangle">
+          <i class="feather-triangle"></i>
+        </button>
+        <button class="btn btn-light tool-btn square" title="square">
+          <i class="feather-square"></i>
+        </button>
+        <button class="btn btn-light tool-btn square" title="eraser">
+          <i class="fa fa-eraser"></i>
+        </button>
+      </div>
+
+      <!-- color tools -->
+      <div class="color-tools d-flex justify-content-end align-items-center rounded border p-2 bg-body">
+        <div class="new-color"></div>
+        <div class="rounded-circle border color-tool mx-2 active" style="background-color: #000"></div>
+        <div class="rounded-circle border color-tool mx-2" style="background-color: #f00"></div>
+        <div class="rounded-circle border color-tool mx-2" style="background-color: #0f0"></div>
+        <div class="rounded-circle border color-tool mx-2" style="background-color: #00f"></div>
+        <div>
+          <label for="custom-color" class="rounded-circle border color-tool mx-2">
+            <img class="w-100" style="margin-top: -3px;"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Color_circle_%28RGB%29.png/800px-Color_circle_%28RGB%29.png"
+              alt="">
+          </label>
+          <input class="rounded-circle border color-tool invisible" type="color" id="custom-color">
+        </div>
+      </div>
+    </nav>
+
+    <!-- brush size -->
+    <div class="border rounded mb-2 d-flex justify-content-between align-items-center bg-body">
+      <div>
+        <label for="range" class="p-2 h6">Brush Size: </label>
+        <input type="range" name="" id="range" value="3" min="1" max="30">
+      </div>
+      <div class="p-2">
+        <button class="btn btn-danger clear">Clear</button>
+        <button class="btn btn-primary save">Save</button>
+      </div>
+    </div>
+
+    <!-- canvas -->
+    <div class="frame bg-body">
+      <canvas id="canvas"></canvas>
+    </div>
+
+  </div>
+</body>
+<script type="module" src="script.js"></script>
+
+</html>

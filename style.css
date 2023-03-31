@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(247, 242, 242);
+}
+.frame {
+  width: 100%;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+}
+
+canvas {
+  width: 100%;
+  min-height: 500px;
+}
+
+.color-tool {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.active.color-tool::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="range"] {
+  cursor: pointer;
+  height: 5px;
+}
